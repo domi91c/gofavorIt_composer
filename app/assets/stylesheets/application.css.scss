@@ -13,3 +13,172 @@
  *= require_tree .
  *= require_self
  */
+
+.watch-icon {
+  color: white;
+  margin-left:100px;
+  display: inline;
+}
+.watch-badge {
+  color: white;
+  display: inline;
+  border: solid .2px;
+  border-radius: 10;
+}
+.mail-icon {
+  color: white;
+  margin-left:150px;
+  display: inline;
+}
+.mail-badge {
+  color: white;
+  display: inline;
+  border: solid .2px;
+  border-radius: 10;
+}
+.profile-image {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  vertical-align:middle;
+
+}
+
+
+
+.navbar-inverse {
+  background-color: #0075a7;
+  border:none
+
+}
+#search-query-2{
+  background-color: #293a4a;
+  border-color: transparent;
+  color: white;
+
+
+}
+.navbar{
+  border: none;
+  border-left: none;
+
+}
+
+
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: font-url('glyphicons-halflings-regular.eot');
+  src: font-url('glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), font-url('glyphicons-halflings-regular.woff') format('woff'),
+  font-url('glyphicons-halflings-regular.ttf') format('truetype'), font-url('glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+@font-face {
+  font-family: "Flat-UI-Icons";
+  src: font-url("Flat-UI-Icons.eot");
+  src: font-url("Flat-UI-Icons.eot?#iefix") format("embedded-opentype"), font-url("Flat-UI-Icons.woff") format("woff"), font-url("Flat-UI-Icons.ttf") format("truetype"), font-url("Flat-UI-Icons.svg#Flat-UI-Icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar-form {
+  width: 300px;
+}
+
+.profilename {
+  display:inline-block;
+  margin-right:10px;
+  width:200px;
+  font-size: 20;
+  color: white;
+}
+
+.profilepic {
+  margin-top: 5px ;
+  display:inline-block;
+  width:100px;
+  content:url(profilepic.png);
+
+}
+
+.logo {
+
+  margin-top: 100px;
+  content:url(gofavorit-brackets-logo.png);
+  height: 70px;
+}
+
+
+.navlogo {
+
+  content:url(profilepic.png);
+  height: 53px;
+  display:inline;
+
+}
+
+
+#navbar {
+  background-color: #000;
+  color: #bac1c8;
+  padding: 20px;
+}
+#firstbar
+{
+  min-width:960px;
+  height:250px;
+  background:url("background_favourit.jpg");
+}
+
+#headerbar {
+
+  background-color: #4D77A2;
+  color: #bac1c8;
+  padding: 10px;
+  padding-top: 30px;
+}
+
+#headerbar2 {
+  background-color: #d0e3c6;
+  color: #bac1c8;
+  border: none;
+  height: 10px;
+
+}
+
+#footer2 {
+  background-color: #000000;
+  height: 10px;
+  margin-top: 50px;
+  position: bottom;
+  bottom:0;
+  width: 100%;
+  z-index: 1;
+}
+
+
+.contain{
+  border: 10px;
+  padding: 10px;
+  background: #f5f5f5;
+
+
+}
+
+
+body{
+
+  background-repeat: inherit;
+}
+
+
+
+
+.navbar-inverse {
+  background-color: #0075a7;
+}
+
+.contain-fill {
+
+  width: 100%;
+  position: absolute;
+}

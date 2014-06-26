@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 	  resources :galleries
   end
 
- # resources :offers
+  resources :offers
 
 
   resources :pictures
