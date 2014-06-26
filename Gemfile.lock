@@ -1,12 +1,3 @@
-GIT
-  remote: git://github.com/ging/mailboxer.git
-  revision: cbadbe3bd36a8b90510fcf9e2606168644268e21
-  specs:
-    mailboxer (0.12.1)
-      carrierwave (>= 0.5.8)
-      foreigner (>= 0.9.1)
-      rails (>= 3.2.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -181,6 +172,10 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mailboxer (0.12.1)
+      carrierwave (>= 0.5.8)
+      foreigner (>= 0.9.1)
+      rails (>= 3.2.0)
     meta_request (0.3.0)
       callsite
       rack-contrib
@@ -370,7 +365,7 @@ DEPENDENCIES
   kaminari
   launchy
   less-rails
-  mailboxer!
+  mailboxer
   meta_request
   paperclip
   pg
