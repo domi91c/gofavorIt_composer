@@ -17,7 +17,25 @@ gem 'pundit'
 gem 'simple_form'
 gem 'unicorn'
 gem 'unicorn-rails'
+
+
+#from untitled16
+gem 'less-rails'
+gem 'therubyracer'
+gem 'gmaps4rails', '~> 1.5.6'
+gem 'geocoder'
+gem 'paperclip', '~> 4.1.1'
+gem 'jquery-ui-rails'
+gem 'designmodo-flatuipro-rails'
+gem  'mailboxer', github: 'ging/mailboxer'
+gem 'acts-as-messageable', '~> 0.4.9'
+gem 'kaminari'
+gem 'rmagick'
+#
+
+
 group :development do
+	gem 'meta_request'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
   gem 'capistrano', '~> 3.0.1'
