@@ -60,17 +60,12 @@
             <img src="http://placehold.it/30x30">
             <%= current_user.try(:email)%>
 
-            <div class="mail-icon">
-              <a href="#fakelink">
-                <%= link_to image_tag("icons/png/Mail.png", height: '26', width: '26'), conversations_path %>
-              </a>      </div>
+
           </div>
       <% end %>
 
       <div class="mail-badge">
         <% if user_signed_in? %>
-            <%=  current_user.mailbox.inbox({:read => false}).count%>
-            <%=  current_user.mailbox.inbox({:trashed => true}).count%>
 
         <% end %>
       </div>
