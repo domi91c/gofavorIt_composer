@@ -52,13 +52,13 @@
         <% end %>      </ul>
       <% if user_signed_in? %>
 
-          <div class="pull-left profile-image" style="color: white">
 
-            <img src="http://placehold.it/30x30">
-            <%= current_user.try(:email)%>
-
+          <div class="navlogo">
 
           </div>
+          <%= current_user.try(:email)%>
+
+
       <% end %>
 
 
