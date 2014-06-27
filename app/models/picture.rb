@@ -3,7 +3,7 @@ class Picture < ActiveRecord::Base
 
   belongs_to :gallery
   belongs_to :request
-  belongs_to :wall
+  belongs_to :profile
 
 
   has_attached_file :image,
