@@ -31,6 +31,7 @@ gem  'mailboxer'
 gem 'acts-as-messageable', '~> 0.4.9'
 gem 'kaminari'
 gem 'rmagick'
+gem 'rails_12factor'
 #
 
 
