@@ -4,12 +4,15 @@ class RequestsController < ApplicationController
   # GET /requests
   # GET /requests.json
   def index
-	  @requests = Request.all.page(params[:page]).per(5)
+	  # @requests = Request.all.page(params[:page]).per(5)
 
 	  if params[:search]
-		  @requests = Request.search(params[:search]).order("created_at DESC").page(params[:page]).per(5)
+		  #@requests = Request.search(params[:search]).order("created_at DESC").page(params[:page]).per(5)
+		  @requests = Request.paginate(:page => params[:page], :per_page => 5)
+
 	  else
-		  @requests = Request.all.order('created_at DESC').page(params[:page]).per(5)
+		  @requests = Request.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 5)
+
 	  end
   end
 

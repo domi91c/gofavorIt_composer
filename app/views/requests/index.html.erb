@@ -50,10 +50,31 @@
   <% end %>
   </tbody>
 </table>
+<%= will_paginate @requests, renderer: BootstrapPagination::Rails %>
+
 <%= button_to new_request_path, class: "btn btn-large primary", :method => :get do %>
     New Request <i class="glyphicon glyphicon-plus"></i>
+
+
+
 <% end %>
+<div class="control-group huge">
+  <div class="input-append">
+    <input class="span2" id="appendedInputButton-01" type="text" placeholder="Search">
+    <button class="btn btn-huge" type="button"><span class="fui-search"></span></button>
+  </div>
+</div>
 
+<div class="input-append">
+  <input type="text" class="span2 huge search-query search-query-rounded" placeholder="Search" id="search-query-5">
+  <button type="submit" class="btn btn-huge"><span class="fui-search"></span></button>
+</div>
 
+<div class="control-group">
+  <div class="input-prepend input-datepicker">
+    <button type="button" class="btn"><span class="fui-calendar"></span></button>
+    <input type="text" class="span2 hasDatepicker" value="14 March, 2013" id="datepicker-01">
+  </div>
+</div>
 
 

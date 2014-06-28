@@ -32,6 +32,8 @@
       <%= ff.label :pictures, :class => 'control-label' %>
       <div class="controls">
         <!-- The magic is coming ...look at my eyes....shazammmm -->
+        <%= f.file_field :data, :id => 'image_upload'  %>
+
         <%= file_field_tag "images[]", type: :file, multiple: true %>
       </div>
     </div>

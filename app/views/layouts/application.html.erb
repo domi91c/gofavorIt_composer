@@ -15,13 +15,6 @@
   <div class="container-fluid">
 
     <div class="pull-left ">
-      <!-- <div class="nav-header">
-         <div class="navlogo"></div>
-
-         < % if user_signed_in? % >
-           <div class="requestname"><strong>< %= current_user.username % ></strong></div>
-       < % end % >
-       </div>-->
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -29,6 +22,10 @@
         <span class="icon-bar"></span>
 
       </button>
+      <a class="navbar-brand" rel="home" href="#" title="Buy Sell Rent Everyting">
+        <img style="max-width:130px; margin-top: -7px;"
+             src="/images/gofavorit-green.png">
+      </a>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
@@ -52,10 +49,11 @@
         <% end %>      </ul>
       <% if user_signed_in? %>
 
-          <div class="navlogo">
+          <%= current_user.try(:email) %>
+
+          <div style="margin-left: 5px" class="navlogo">
 
           </div>
-          <%= current_user.try(:email)%>
 
       <% end %>
 
@@ -68,10 +66,10 @@
             <%= hidden_field_tag :wide_search, "true" %>
         <% end %>
       </form>
+
     </div>
   </div>
   <div id="headerbar2">
-
   </div>
 
 </nav>
@@ -80,7 +78,7 @@
 
 </div>
 
-<!--<div class="logo page-header">-->
+  <!--<div class="logo page-header">-->
 
 <!--</div>-->
 <div class="headerbar2">
@@ -106,7 +104,6 @@
     <li><%= link_to "Career", conversations_path %></li>
     <li><%= link_to "Delivery", conversations_path %></li>
     <li><%= link_to "Learning", conversations_path %></li>
-
 
 
   </ul>

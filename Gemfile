@@ -18,7 +18,7 @@ gem 'simple_form'
 gem 'unicorn'
 gem 'unicorn-rails'
 gem 'bootstrap_form'
-
+gem 'will_paginate-bootstrap'
 
 
 #from untitled16
