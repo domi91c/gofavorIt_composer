@@ -38,15 +38,16 @@
             <li><%= link_to "Add Request", new_request_path %></li>
           </ul>
         </li>
-        <li><%= link_to "Inbox", conversations_path %></li>
+        <li><%= link_to "Inbox", conversations_path %><span class="navbar-new">10</span></li>
         <li><%= link_to "Profile", profiles_path %></li>
         <li><a href="#">Help</a></li>
-
         <% if user_signed_in? %>
             <li class="active"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
         <% else %>
             <li class="active"><%= link_to "Sign In", new_user_session_path %></li>
         <% end %>      </ul>
+
+
       <% if user_signed_in? %>
 
           <%= current_user.try(:email) %>
@@ -55,8 +56,8 @@
 
           </div>
 
-      <% end %>
 
+      <% end %>
 
       <form class="navbar-form navbar-right">
         <%= form_tag(offers_path, :method => :get) do %>
@@ -66,7 +67,6 @@
             <%= hidden_field_tag :wide_search, "true" %>
         <% end %>
       </form>
-
     </div>
   </div>
   <div id="headerbar2">
@@ -116,7 +116,6 @@
   <%= yield %>
 
 </div>
-
 
 <footer>
   <p class="pull-right">©2014 Lunar FX</p>

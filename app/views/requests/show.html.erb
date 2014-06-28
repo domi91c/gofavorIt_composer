@@ -38,6 +38,9 @@
   </ul>
   </div>
 <div class="form-actions">
+
+</div>
+<div class="form-actions" id="reply">
   <% if @request.user != current_user %>
   <%= link_to "Reply",
               new_message_path(:request => @request.id), :class => 'btn'  %>
@@ -51,4 +54,13 @@
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
+
+
+
+  <% if @request.user != current_user %>
+
+      <%= link_to "Reply", new_message_path(@request.id, :format => :js),
+                  :remote => true, :id => 'new_comment_link', :class => 'btn'  %>
+  <% end %>
+
 </div>
