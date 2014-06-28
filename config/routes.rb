@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   root :to => "visitors#index"
   devise_for :users
-  resources :users
+  resources :users do
+	  resources :profiles
+  end
   resources :requests
 
+  resources :profiles
 
 
 
@@ -21,7 +24,6 @@ Rails.application.routes.draw do
 
   resources :offers
 
-	resources :profiles
 
   resources :pictures
 

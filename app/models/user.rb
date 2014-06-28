@@ -2,7 +2,14 @@ class User < ActiveRecord::Base
 
 	acts_as_messageable
 
-  enum role: [:user, :vip, :admin]
+
+	has_many :offers
+	has_many :requests
+	has_one :profile
+	accepts_nested_attributes_for :profile
+
+
+	enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?
 
   def set_default_role

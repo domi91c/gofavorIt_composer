@@ -1,39 +1,42 @@
 <%- model_class = Request -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+  <h4><%= @request.title %></h4>
 </div>
 
+<div class="navlogo">
+<img src="profilepic.png">
+</div>
+<%= link_to @request.user.name %>
+
+<br>
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @request.title %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= @request.description %></dd>
+
+
+  <p><%= @request.description %></p>
 </dl>
 
 
 <div class="row">
+  <div class="col-xs-6 col-sm-3"></div>
+
+  <div class="col-xs-6 col-sm-3"></div>
+
   <ul class="thumbnails files">
         <% @request.gallery.pictures.each do |pic| %>
-            <li class="span3" id="picture_<%= pic.id %>">
-              <div class="thumbnail">
+            <div class="span3" id="picture_<%= pic.id %>" >
+              <div class="thumbnail col-xs-6 col-sm-3">
                 <%= image_tag pic.image.url %>
                 <div class="caption">
                   <p style="text-align: center;">
-                    <%= link_to "Edit", picture_path(pic) %>
 
-                    <%=
-                        link_to "Delete", pic,
-                                :data => { :confirm => "Are you sure?" },
-                                :method => :delete
-                    %>
 
                   </p>
                 </div>
               </div>
-            </li>
+            </div>
         <% end %>
   </ul>
-</div>
+  </div>
 <div class="form-actions">
   <% if @request.user != current_user %>
   <%= link_to "Reply",

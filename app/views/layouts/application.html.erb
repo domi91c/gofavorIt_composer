@@ -42,7 +42,7 @@
           </ul>
         </li>
         <li><%= link_to "Inbox", conversations_path %></li>
-        <li><%= link_to "request", requests_path %></li>
+        <li><%= link_to "Profile", profiles_path %></li>
         <li><a href="#">Help</a></li>
 
         <% if user_signed_in? %>
@@ -52,12 +52,10 @@
         <% end %>      </ul>
       <% if user_signed_in? %>
 
-
           <div class="navlogo">
 
           </div>
           <%= current_user.try(:email)%>
-
 
       <% end %>
 
@@ -94,7 +92,7 @@
 <div class="col-sm-3 col-md-2 sidebar-offcanvas well" id="sidebar" role="navigation">
   <ul class="nav nav-list">
     <li class="nav-header">Categories</li>
-    <li><%= link_to "Labor", requests_path %></li>
+    <li><%= link_to "Edit profile", requests_path %></li>
     <li><%= link_to "Carpooling", offers_path %></li>
     <li><%= link_to "Tutoring", requests_path %></li>
     <li><%= link_to "Art", conversations_path %></li>

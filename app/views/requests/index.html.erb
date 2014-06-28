@@ -22,14 +22,7 @@
 
 
 <table class="table table-striped">
-  <thead>
-  <tr>
-    <th><%= User %></th>
-    <th><%= model_class.human_attribute_name(:title) %></th>
-    <th><%= model_class.human_attribute_name(:created_at) %></th>
-    <th><%= t '.actions', :default => t("helpers.actions") %></th>
-  </tr>
-  </thead>
+
   <tbody>
    <!--paginate @requests -->
 
@@ -44,6 +37,7 @@
         <td><%= link_to request.title, request_path(request) %></td>
         <td><%= request.created_at.strftime("%H:%M %b %d") %></td>
 
+        <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_request_path(request), :class => 'button button-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
