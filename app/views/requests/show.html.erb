@@ -57,10 +57,4 @@
 
 
 
-  <% if @request.user != current_user %>
-
-      <%= link_to "Reply", new_message_path(@request.id, :format => :js),
-                  :remote => true, :id => 'new_comment_link', :class => 'btn'  %>
-  <% end %>
-
 </div>

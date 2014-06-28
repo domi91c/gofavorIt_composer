@@ -1,11 +1,15 @@
 Reply to post:
 
-<h4><%=  @request.title %></h4>
-<h4>From: <%= @user.email %></h4>
+<h3><%=  @request.title %></h3>
+<h5>To: <%= @user.name %></h5>
 <%= form_tag({controller: "messages", action: "create"}, method: :post) do %>
     <%= hidden_field_tag :subject, @request.title %>
-    <%= label :body, "Message text" %>
-    <%= text_area_tag :body %>
+    <%= text_area_tag :body, "", :size=>"3000px*390px" %>
+
     <%= hidden_field_tag(:user, "#{@user.id}") %>
+    <br>
     <%= submit_tag 'Send message', class: "btn btn-primary" %>
 <% end %>
+
+<%= link_to "Reply",
+            new_message_path(:request => @request.id), :class => 'btn'  %>

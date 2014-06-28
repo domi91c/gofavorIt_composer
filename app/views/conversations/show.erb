@@ -18,6 +18,8 @@
 
         <td> <%= m.body %> </td>
 
+        <td><%= link_to "Reply", {:controller => "messages", :action => "reply", :id => conversation.id}, :title => "Reply", :class => 'btn' %></td>
+
       </tr>
   <% end %>
 
