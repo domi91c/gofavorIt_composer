@@ -59,6 +59,7 @@
       <% if user_signed_in? %>
 
           <%= current_user.try(:email) %>
+          <%= image_tag current_user.avatar.url(:thumb) %>
 
           <div style="margin-left: 5px" class="navlogo">
 
@@ -128,6 +129,10 @@
 <footer>
   <p class="pull-right">©2014 Lunar FX</p>
 </footer>
+
+<%= image_tag current_user.avatar.url(:large) %>
+<div class=""><%= image_tag(current_user.avatar.url(:thumb)) %></div>
+
 
 </body>
 </html>

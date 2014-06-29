@@ -6,14 +6,22 @@ class User < ActiveRecord::Base
 	has_many :offers
 	has_many :requests
 	has_one :profile
+	has_one :gallery
+	has_many :pictures, through: :gallery
+
 	accepts_nested_attributes_for :profile
 
+
+	has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+	validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
+	do_not_validate_attachment_file_type :avatar
 
 	enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?
 
   def set_default_role
-    self.role ||= :user
+    self.role ||= :admin
   end
 
   # Include default devise modules. Others available are:
