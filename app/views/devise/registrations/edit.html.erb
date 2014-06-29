@@ -4,6 +4,11 @@
                :html => {multipart: true, :method => :put, :role => 'form'}) do |f| %>
     <%= devise_error_messages! %>
     <div class="form-group">
+
+      <%= render partial: 'avatars/form',
+                 object: resource,
+                 as: :avatarable %>
+
       <div class="form-group">
         <%= f.label :avatar, class: 'col-sm-2 control-label'  %>
         <div class="col-sm-6">

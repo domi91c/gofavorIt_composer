@@ -26,15 +26,15 @@ gem 'less-rails'
 gem 'therubyracer'
 gem 'gmaps4rails', '~> 1.5.6'
 gem 'geocoder'
-gem 'paperclip'
+gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'jquery-ui-rails'
 gem 'designmodo-flatuipro-rails'
 gem  'mailboxer'
 gem 'acts-as-messageable', '~> 0.4.9'
 gem 'kaminari'
-gem 'rmagick'
 gem 'rails_12factor'
-#
+gem 'avatars_for_rails'
+
 
 
 group :development do
