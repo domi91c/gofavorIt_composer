@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
 	has_attached_file :avatar,
 	                  :path => ":rails_root/public/images/:id/:filename",
 	                  :url  => "/images/:id/:filename",
-	                  :styles => { :large => "1000x1000>" }
+	                  :styles => { :small => "1000x1000>" }
 
 
 	do_not_validate_attachment_file_type :avatar

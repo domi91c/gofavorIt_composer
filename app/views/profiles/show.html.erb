@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 
+<%= render partial: 'avatars/form',
+           object: @profile.user,
+           as: :avatarable %>
 
 <p>
   <strong>Bio:</strong>
