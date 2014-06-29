@@ -8,22 +8,15 @@ Rails.application.routes.draw do
 
   resources :profiles
 
-
-
-
-
-  resources :walls do
-	  resources :galleries
-  end
-
 #  resources :locations
 
   resources :requests do
 	  resources :galleries
   end
 
-  resources :offers
-
+	resources :offers do
+		resources :galleries
+	end
 
   resources :pictures
 
@@ -32,6 +25,8 @@ Rails.application.routes.draw do
   resources :messages do
 	  member do
 		  post :new
+		  get :newoffer
+
 	  end
 	  collection do
 		  get :reply
@@ -45,6 +40,7 @@ Rails.application.routes.draw do
 		  post :untrash
 	  end
 	  collection do
+		  get :sentbox
 		  get :trashbin
 		  post :empty_trash
 	  end

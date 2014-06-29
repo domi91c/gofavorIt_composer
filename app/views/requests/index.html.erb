@@ -27,6 +27,8 @@
    <!--paginate @requests -->
 
   <% @requests.each do |request| %>
+
+  <% if request.user_id != current_user.id %>
       <tr>
         <td>
           <div class="navlogo">
@@ -48,6 +50,7 @@
         </td>
       </tr>
   <% end %>
+      <% end %>
   </tbody>
 </table>
 <%= will_paginate @requests, renderer: BootstrapPagination::Rails %>

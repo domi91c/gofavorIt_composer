@@ -7,6 +7,12 @@ class MessagesController < ApplicationController
 		@user = @request.user
 	end
 
+	def newoffer
+		@offer = Offer.find(params[:offer])
+		@message = current_user.messages.new
+		@user = @offer.user
+	end
+
 	def reply
 		@conversation ||= current_user.mailbox.conversations.find(params[:id])
 	end

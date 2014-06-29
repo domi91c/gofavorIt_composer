@@ -1,0 +1,44 @@
+
+<%= form_for @offer, :html => { :class => 'form-horizontal' } do |f| %>
+
+    <div class="control-group">
+      <%= f.label :title, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :title, :class => 'form-control' %>
+      </div>
+    </div>
+
+      <textarea>
+
+
+      </textarea>
+
+    <div class="control-group">
+      <%= f.label :longitude, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :longitude, :class => 'text_field' %>
+      </div>
+
+
+      <div class="control-group">
+        <%= f.label :latitude, :class => 'control-label' %>
+        <div class="controls">
+          <%= f.text_field :latitude, :class => 'text_field' %>
+        </div>
+
+
+
+    </div>
+    <div class="form-actions">
+
+
+      <%= button_tag(type: 'f.submit', class: "btn btn-primary") do %>
+          <i class="glyphicon glyphicon-ok-sign"></i> Create Offer
+      <% end %>
+
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  requests_path, :class => 'button' %>
+    </div>
+        </div>
+<% end %>
+</div>

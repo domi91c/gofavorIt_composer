@@ -3,7 +3,6 @@
   <tbody>
   <% @conversations.each do |conversation| %>
   <tr>
-      <% if conversation.originator != current_user %>
 
         <td>
             <div class="navlogo">
@@ -27,6 +26,8 @@
         </tr>
           </tbody>
 
-      <% end %>
-  <% end %>
+    <% end %>
+
+  <td><%= link_to "Sent Messages", {:controller => "conversations", :action => "sentbox"}, :title => "Reply" %></td>
+
   </table>
